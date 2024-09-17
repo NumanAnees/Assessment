@@ -436,7 +436,9 @@
   {
     "jobId": "33d8bd3d-2e7d-5e41-86d7-79f8976ea6a8",
     "createdAt": "2024-09-17T02:27:04.153Z",
-    "status": "pending"
+    "status": "failed",
+    "resolvedAt": "2024-09-17T02:35:00.006Z",
+    "result": null
   },
   {
     "jobId": "2c7003d2-9e46-8aec-1162-0baa4c77ee99",
@@ -474,7 +476,9 @@
   {
     "jobId": "c2d5f03c-da90-f3e1-7f18-e09c174132e1",
     "createdAt": "2024-09-17T02:27:07.416Z",
-    "status": "pending"
+    "status": "failed",
+    "resolvedAt": "2024-09-17T02:35:00.006Z",
+    "result": null
   },
   {
     "jobId": "25675937-1861-c0e9-865b-d3747788ac7b",
@@ -501,16 +505,34 @@
   {
     "jobId": "0ab1bd3e-7e69-6e1f-6a97-56421b0b4573",
     "createdAt": "2024-09-17T02:27:09.737Z",
-    "status": "pending"
+    "status": "completed",
+    "resolvedAt": "2024-09-17T02:32:44.288Z",
+    "result": {
+      "id": "-N2Jdazh03Y",
+      "slug": "blueberry-pie-on-plate-with-knife--N2Jdazh03Y",
+      "url": "https://images.unsplash.com/photo-1459663561442-984db4f334e8?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY1NDAzNjN8&ixlib=rb-4.0.3"
+    }
   },
   {
     "jobId": "465873fc-6494-bceb-b370-9855d7aa894a",
     "createdAt": "2024-09-17T02:27:10.319Z",
-    "status": "pending"
+    "status": "completed",
+    "resolvedAt": "2024-09-17T02:31:34.748Z",
+    "result": {
+      "id": "GyV6SL_fKsI",
+      "slug": "chicken-roast-on-roasting-pan-GyV6SL_fKsI",
+      "url": "https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY1NDAyOTR8&ixlib=rb-4.0.3"
+    }
   },
   {
     "jobId": "c2b6e36a-55ba-75e9-16bb-952905b18f4f",
     "createdAt": "2024-09-17T02:27:11.112Z",
-    "status": "pending"
+    "status": "completed",
+    "resolvedAt": "2024-09-17T02:34:27.211Z",
+    "result": {
+      "id": "NLU117HCVuc",
+      "slug": "bunch-of-assorted-produce-in-brown-wicker-basket-NLU117HCVuc",
+      "url": "https://images.unsplash.com/photo-1418669112725-fb499fb61127?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY1NDA0NjZ8&ixlib=rb-4.0.3"
+    }
   }
 ]
