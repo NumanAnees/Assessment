@@ -8,21 +8,26 @@ import { ArrowUpDown } from "lucide-react";
 export const columns: ColumnDef<JobData>[] = [
   {
     accessorKey: "jobId",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          className="hover:bg-transparent hover:text-white"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          job Id
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
+    header: "job Id",
     cell: (row) => (
       <span className="ml-4">{row.getValue() as JobData["jobId"]}</span>
     ),
+  },
+  {
+    accessorKey: "result",
+    header: "Image",
+    cell: (row) => {
+      const imageURL = (row.getValue() as JobData["result"])?.url;
+      return imageURL ? (
+        <img
+          src={imageURL}
+          alt="Job Image"
+          style={{ width: "100px", height: "100px" }}
+        />
+      ) : (
+        <span>Waiting for image...</span>
+      );
+    },
   },
   {
     accessorKey: "status",
@@ -32,9 +37,9 @@ export const columns: ColumnDef<JobData>[] = [
       return (
         <Badge
           className={`${
-            status === "failed"
+            status === "FAILED"
               ? "bg-red-500 hover:bg-red-500"
-              : status === "pending"
+              : status === "PENDING"
               ? "bg-yellow-500 hover:bg-yellow-500"
               : "bg-[#00A795] hover:bg-[#00A795]"
           }`}
@@ -78,10 +83,16 @@ export const columns: ColumnDef<JobData>[] = [
         </Button>
       );
     },
-    cell: (row) => (
-      <span className="ml-4">
-        {formatDate(row.getValue() as JobData["resolvedAt"])}
-      </span>
-    ),
+    cell: (row) => {
+      const resolvedAt = row.getValue() as JobData["resolvedAt"];
+
+      return resolvedAt ? (
+        <span className="ml-4">
+          {formatDate(row.getValue() as JobData["resolvedAt"])}
+        </span>
+      ) : (
+        <span className="ml-4">Waiting for resolving...</span>
+      );
+    },
   },
 ];

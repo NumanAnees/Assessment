@@ -2,7 +2,7 @@ export interface JobData {
   jobId: string;
   createdAt?: Date;
   resolvedAt?: Date;
-  status: "pending" | "completed" | "failed";
+  status: "PENDING" | "COMPLETED" | "FAILED";
   result?: {
     id: string;
     slug: string;

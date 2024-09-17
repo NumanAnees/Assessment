@@ -43,7 +43,7 @@ export class JobsProcessor {
       const result: JobData = {
         jobId,
         resolvedAt: new Date(),
-        status: 'completed',
+        status: 'COMPLETED',
         result: {
           id: imageResponse.data.id,
           slug: imageResponse.data.slug || '',
@@ -60,7 +60,7 @@ export class JobsProcessor {
       const failedResult: JobData = {
         jobId,
         resolvedAt: new Date(),
-        status: 'failed',
+        status: 'FAILED',
         result: null,
       };
 

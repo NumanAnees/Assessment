@@ -35,7 +35,7 @@ export class JobsService {
     const newJob: JobData = {
       jobId: this.generateJobId(),
       createdAt: new Date(),
-      status: 'pending',
+      status: 'PENDING',
     };
     jobs.push(newJob);
     this.writeJobsToFile(jobs);
@@ -65,7 +65,6 @@ export class JobsService {
   }
 
   async getAllJobs(): Promise<JobData[]> {
-    const failedJobs = await this.jobsQueue.getFailed();
     return this.readJobsFromFile();
   }
 
@@ -90,8 +89,8 @@ export class JobsService {
       for (const job of failedJobs) {
         const jobData = fileData.find((j) => j.jobId === job.data.jobId);
 
-        if (jobData && jobData.status === 'pending') {
-          jobData.status = 'failed';
+        if (jobData && jobData.status === 'PENDING') {
+          jobData.status = 'FAILED';
           jobData.resolvedAt = new Date();
           jobData.result = null;
 
