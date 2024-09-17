@@ -1,7 +1,8 @@
-import { Controller, Post, Get, Param } from "@nestjs/common";
-import { JobsService } from "./jobs.service";
+import { Controller, Post, Get, Param, UseGuards } from '@nestjs/common';
+import { SkipThrottle, ThrottlerGuard } from '@nestjs/throttler';
+import { JobsService } from './jobs.service';
 
-@Controller("jobs")
+@Controller('jobs')
 export class JobsController {
   constructor(private readonly jobsService: JobsService) {}
 
@@ -11,16 +12,18 @@ export class JobsController {
     return { jobId };
   }
 
-  @Get(":id")
-  async getJobStatus(@Param("id") id: string) {
+  @Get(':id')
+  @SkipThrottle()
+  async getJobStatus(@Param('id') id: string) {
     const jobStatus = await this.jobsService.getJobStatus(id);
     if (!jobStatus) {
-      return { status: "Job not found" };
+      return { status: 'Job not found' };
     }
     return jobStatus;
   }
 
   @Get()
+  @SkipThrottle()
   async getAllJobs() {
     const jobs = await this.jobsService.getAllJobs();
     return jobs;

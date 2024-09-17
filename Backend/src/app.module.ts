@@ -1,10 +1,13 @@
-import { Module } from "@nestjs/common";
-import { ConfigModule } from "@nestjs/config";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
-import { JobsModule } from "./jobs/jobs.module";
-import { BullModule } from "@nestjs/bull";
-import * as path from "path";
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { JobsModule } from './jobs/jobs.module';
+import { BullModule } from '@nestjs/bull';
+import { ScheduleModule } from '@nestjs/schedule';
+import * as path from 'path';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { APP_GUARD } from '@nestjs/core';
 
 @Module({
   imports: [
@@ -12,27 +15,41 @@ import * as path from "path";
       load: [],
       isGlobal: true,
     }),
+    ThrottlerModule.forRoot([
+      {
+        ttl: 60000,
+        limit: 10,
+      },
+    ]),
     BullModule.forRoot({
       redis: {
-        host: "localhost",
+        host: 'localhost',
         port: 6379,
       },
     }),
     BullModule.registerQueue({
-      name: "jobs",
+      name: 'jobs',
       // processors: [
       //   {
       //     concurrency: 5,
-      //     path: path.join(__dirname, "jobs", "jobs.processor.js"),
+      //     path: path.join(__dirname, 'jobs', 'jobs.processor.js'),
       //   },
       // ],
-      defaultJobOptions: {
-        timeout: 100000,
-      },
+      // settings: {
+      //   stalledInterval: 30000, // Check for stalled jobs every 30 seconds (default)
+      //   lockDuration: 60000, // Extend lock duration to 60 seconds
+      // },
     }),
+    ScheduleModule.forRoot(),
     JobsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
+  ],
 })
 export class AppModule {}
