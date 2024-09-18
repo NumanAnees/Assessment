@@ -15,7 +15,6 @@ export class JobsProcessor {
   async handleJob(job: Job<{ jobId: string }>) {
     const { jobId } = job.data;
     try {
-      console.log(`Processing job ${jobId}`);
       // const delay = (Math.floor(Math.random() * 60) + 1) * 5000; // Minimum delay 5s and maximum delay 5mins
       const delay = (Math.floor(Math.random() * 60) + 1) * 1000; // Minimum delay 1s and maximum delay 1 min
       const UNSPLASH_ACCESS_KEY = this.configService.get<string>(
@@ -32,8 +31,6 @@ export class JobsProcessor {
           },
         },
       );
-
-      console.log('Unsplash API response:', imageResponse.data.id);
 
       const image = imageResponse.data?.urls?.raw;
       if (!image) {
@@ -53,7 +50,6 @@ export class JobsProcessor {
 
       // Updating the job status in file
       this.updateJobStatus(result);
-      console.log(`Job ${jobId} completed successfully`);
       job.moveToCompleted(); //Marking the job as completed
     } catch (error) {
       console.error(`Error processing job ${jobId}:`, error.message);

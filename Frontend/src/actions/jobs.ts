@@ -1,27 +1,55 @@
-"use server";
-
 import { revalidatePath } from "next/cache";
+import { JobData } from "@/types";
 
-export async function fetchJobs(): Promise<any[]> {
-  const response = await fetch("http://localhost:4000/jobs", {
-    cache: "no-store",
-  });
-  return response.json();
+export async function fetchJobs(): Promise<JobData[]> {
+  try {
+    const response = await fetch(`${process.env.API_ENDPOINT}/jobs`, {
+      cache: "no-store",
+    });
+
+    if (!response) {
+      throw new Error(`Error fetching jobs: ${response}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error in fetchJobs:", error);
+    throw error;
+  }
 }
 
-export async function addJob(): Promise<any> {
-  const response = await fetch("http://localhost:4000/jobs", {
-    method: "POST",
-  });
+export async function addJob(): Promise<JobData> {
+  try {
+    const response = await fetch(`${process.env.API_ENDPOINT}/jobs`, {
+      method: "POST",
+    });
 
-  const newJob = await response.json();
-  revalidatePath("/jobs");
-  return newJob;
+    if (!response) {
+      throw new Error(`Error adding job: ${response}`);
+    }
+
+    const newJob = await response.json();
+    revalidatePath("/jobs");
+    return newJob;
+  } catch (error) {
+    console.error("Error in addJob:", error);
+    throw error;
+  }
 }
 
 export async function pendingJobsCount(): Promise<number> {
-  const response = await fetch("http://localhost:4000/jobs/pending", {
-    cache: "no-store",
-  });
-  return response.json();
+  try {
+    const response = await fetch(`${process.env.API_ENDPOINT}/jobs/pending`, {
+      cache: "no-store",
+    });
+
+    if (!response) {
+      throw new Error(`Error fetching pending jobs count: ${response}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error in pendingJobsCount:", error);
+    throw error;
+  }
 }

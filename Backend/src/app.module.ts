@@ -5,7 +5,6 @@ import { AppService } from './app.service';
 import { JobsModule } from './jobs/jobs.module';
 import { BullModule } from '@nestjs/bull';
 import { ScheduleModule } from '@nestjs/schedule';
-import * as path from 'path';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 
@@ -29,16 +28,6 @@ import { APP_GUARD } from '@nestjs/core';
     }),
     BullModule.registerQueue({
       name: 'jobs',
-      // processors: [
-      //   {
-      //     concurrency: 5,
-      //     path: path.join(__dirname, 'jobs', 'jobs.processor.js'),
-      //   },
-      // ],
-      // settings: {
-      //   stalledInterval: 30000, // Check for stalled jobs every 30 seconds (default)
-      //   lockDuration: 60000, // Extend lock duration to 60 seconds
-      // },
     }),
     ScheduleModule.forRoot(),
     JobsModule,

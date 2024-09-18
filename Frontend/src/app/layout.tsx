@@ -13,13 +13,9 @@ export default function RootLayout({
     <html lang="en">
       <title>Jobs Manager</title>
       <body>
-        <header>
-          <Header />
-        </header>
+        <Header />
         <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </body>
     </html>
   );

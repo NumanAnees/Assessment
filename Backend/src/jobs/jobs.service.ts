@@ -47,13 +47,13 @@ export class JobsService {
         jobId: newJob.jobId,
         createdAt: new Date(),
       },
-      // {
-      //   attempts: 3,
-      //   backoff: {
-      //     type: 'exponential',
-      //     delay: 1000,
-      //   },
-      // },
+      {
+        attempts: 3,
+        backoff: {
+          type: 'exponential',
+          delay: 1000,
+        },
+      },
     );
 
     return newJob.jobId;
@@ -89,7 +89,6 @@ export class JobsService {
     try {
       // Get all failed jobs
       const failedJobs = await this.jobsQueue.getFailed();
-      // this.logger.debug('Failed jobs:', failedJobs);
 
       const fileData = this.readJobsFromFile();
 
