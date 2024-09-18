@@ -68,6 +68,13 @@ export class JobsService {
     return this.readJobsFromFile();
   }
 
+  async pendingJobsCount(): Promise<number | null> {
+    const waitingCount = await this.jobsQueue.getWaitingCount();
+    const activeCount = await this.jobsQueue.getActiveCount();
+
+    return waitingCount + activeCount;
+  }
+
   private generateJobId(): string {
     return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/x/g, () =>
       Math.floor(Math.random() * 16).toString(16),

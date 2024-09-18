@@ -1,26 +1,14 @@
 "use client";
 import React from "react";
-import { addJob } from "@/actions/jobs";
-import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 interface HeadingProps {
   main: string;
   sub: string;
+  handleAddJob: () => void;
 }
 
-const Heading = ({ main, sub }: HeadingProps) => {
-  const router = useRouter();
-
-  const handleAddJob = async () => {
-    try {
-      await addJob();
-      router.refresh();
-    } catch (error) {
-      console.error("Error adding job:", error);
-    }
-  };
-
+const Heading = ({ main, sub, handleAddJob }: HeadingProps) => {
   return (
     <div className="flex justify-between items-center">
       <div>

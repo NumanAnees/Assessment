@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import { JobData } from "@/types";
 import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react";
+import Image from "next/image";
 
 export const columns: ColumnDef<JobData>[] = [
   {
@@ -19,11 +19,7 @@ export const columns: ColumnDef<JobData>[] = [
     cell: (row) => {
       const imageURL = (row.getValue() as JobData["result"])?.url;
       return imageURL ? (
-        <img
-          src={imageURL}
-          alt="Job Image"
-          style={{ width: "100px", height: "100px" }}
-        />
+        <Image src={imageURL} alt="Job Image" width={100} height={100} />
       ) : (
         <span>Waiting for image...</span>
       );
@@ -56,10 +52,8 @@ export const columns: ColumnDef<JobData>[] = [
         <Button
           variant="ghost"
           className="hover:bg-transparent hover:text-white"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Created At
-          <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
@@ -76,10 +70,8 @@ export const columns: ColumnDef<JobData>[] = [
         <Button
           variant="ghost"
           className="hover:bg-transparent hover:text-white"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Resolved At
-          <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },

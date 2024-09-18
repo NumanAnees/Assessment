@@ -12,9 +12,10 @@ import {
 
 interface DataTableProps<TData> {
   table: Table<TData>;
+  data: TData[];
 }
 
-export function DataTable<TData>({ table }: DataTableProps<TData>) {
+export function DataTable<TData>({ table, data }: DataTableProps<TData>) {
   return (
     <div>
       <div className="rounded-md border mb-4">
@@ -44,18 +45,16 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
+            {data.length ? (
+              data.map((row: any, rowIndex) => (
+                <TableRow key={rowIndex}>
+                  {table.getAllColumns().map((column) => (
+                    <TableCell key={column.id}>
+                      {flexRender(column.columnDef.cell, {
+                        getValue: () => row[column.id as keyof typeof row],
+                        // @ts-ignore
+                        row: { original: row },
+                      })}
                     </TableCell>
                   ))}
                 </TableRow>

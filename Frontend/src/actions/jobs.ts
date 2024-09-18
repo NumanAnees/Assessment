@@ -19,19 +19,9 @@ export async function addJob(): Promise<any> {
   return newJob;
 }
 
-export async function updateJobStatus(
-  jobId: string,
-  status: string
-): Promise<any> {
-  const response = await fetch(`http://localhost:4000/jobs/${jobId}`, {
-    method: "PATCH",
-    body: JSON.stringify({ status }),
-    headers: {
-      "Content-Type": "application/json",
-    },
+export async function pendingJobsCount(): Promise<number> {
+  const response = await fetch("http://localhost:4000/jobs/pending", {
+    cache: "no-store",
   });
-
-  const updatedJob = await response.json();
-  revalidatePath("/jobs");
-  return updatedJob;
+  return response.json();
 }
