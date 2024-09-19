@@ -184,6 +184,250 @@
   {
     "jobId": "8f00c0c0-3ec0-2dbd-2188-b9048ad1f4f2",
     "createdAt": "2024-09-18T18:15:03.310Z",
-    "status": "PENDING"
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-18T18:16:53.477Z",
+    "result": {
+      "id": "bWg-BeVJPG4",
+      "slug": "assorted-vegetable-lot-bWg-BeVJPG4",
+      "url": "https://images.unsplash.com/photo-1458917524587-d3236cc8c2c8?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY2ODM0MTN8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "8559af96-d505-f513-9983-be7c64af6958",
+    "createdAt": "2024-09-18T18:47:08.567Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-18T18:47:38.727Z",
+    "result": {
+      "id": "86Xd_vAyFv4",
+      "slug": "selective-focus-photography-of-fruit-desert-on-glass-container-86Xd_vAyFv4",
+      "url": "https://images.unsplash.com/photo-1455099675745-a442989ac8bf?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY2ODUyNTh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "dc045f5b-2597-94d4-7885-ac8f70b3a402",
+    "createdAt": "2024-09-18T18:47:20.864Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-18T18:50:18.258Z",
+    "result": {
+      "id": "dq0x8AvNKv8",
+      "slug": "close-up-photography-of-sliced-lemons-dq0x8AvNKv8",
+      "url": "https://images.unsplash.com/photo-1474222300086-56f8a438e47d?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY2ODU0MTh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "e0f02c72-dc91-1b89-0888-355a29406559",
+    "createdAt": "2024-09-18T18:48:38.967Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-18T18:49:11.487Z",
+    "result": {
+      "id": "2GiRcLP_jkI",
+      "slug": "cucumber-lot-2GiRcLP_jkI",
+      "url": "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY2ODUzNTF8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "9eb9061c-01b1-08c6-2b59-0b9bc396c9a7",
+    "createdAt": "2024-09-18T18:48:50.210Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-18T18:51:33.617Z",
+    "result": {
+      "id": "M2S1qeCIJzI",
+      "slug": "sushi-with-toppings-on-white-board-near-chopsticks-M2S1qeCIJzI",
+      "url": "https://images.unsplash.com/photo-1515692688679-6e42f517b64d?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY2ODU0OTN8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "d35c5185-db93-8344-b903-3c6573080784",
+    "createdAt": "2024-09-19T08:41:05.121Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T08:41:44.746Z",
+    "result": {
+      "id": "LDxq4MnYB5U",
+      "slug": "seafoods-on-round-black-bowl-LDxq4MnYB5U",
+      "url": "https://images.unsplash.com/photo-1454334281609-87a89762912c?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzUzMDR8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "b94b1e67-13df-7f98-e564-a324a1aef90e",
+    "createdAt": "2024-09-19T08:43:22.280Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T08:43:57.064Z",
+    "result": {
+      "id": "KwnMOxpHLE4",
+      "slug": "meat-and-vegetable-on-cooking-pan-KwnMOxpHLE4",
+      "url": "https://images.unsplash.com/photo-1444228425018-ff8535a55c93?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzU0MzZ8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "4948005f-caf2-1688-b754-2139a5cf04ac",
+    "createdAt": "2024-09-19T08:43:25.720Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T08:46:13.776Z",
+    "result": {
+      "id": "PvAAYZx-yf8",
+      "slug": "photo-of-popcorn-kernels-PvAAYZx-yf8",
+      "url": "https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzU1NzN8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "7feabcc9-eec4-c59a-6290-cc52b958df0a",
+    "createdAt": "2024-09-19T09:09:00.333Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:09:39.072Z",
+    "result": {
+      "id": "P8Bx9w0wF4o",
+      "slug": "blueberries-on-white-ceramic-bowl-P8Bx9w0wF4o",
+      "url": "https://images.unsplash.com/photo-1478900799953-bf09659cc42e?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzY5Nzh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "170bd92a-c896-d088-af71-e5c8813fedd9",
+    "createdAt": "2024-09-19T09:11:27.423Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:11:29.010Z",
+    "result": {
+      "id": "M4KpA7NC-l0",
+      "slug": "person-holding-bowl-of-grapes-M4KpA7NC-l0",
+      "url": "https://images.unsplash.com/photo-1473229903343-d7903343f6c0?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzcwODh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "b7350607-7359-6044-1b1d-48c4279369ac",
+    "createdAt": "2024-09-19T09:43:38.721Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:43:54.926Z",
+    "result": {
+      "id": "lPGVTaptCuk",
+      "slug": "teaspoon-dip-into-citrus-fruit-lPGVTaptCuk",
+      "url": "https://images.unsplash.com/photo-1484246402529-a5154bf9c0ce?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzkwMzR8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "bcd593a2-7b0d-b537-e24c-ad05b6b8956b",
+    "createdAt": "2024-09-19T09:45:01.224Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:46:00.018Z",
+    "result": {
+      "id": "jkDLNDGougw",
+      "slug": "person-holding-blue-ceramic-mug-and-white-magazine-jkDLNDGougw",
+      "url": "https://images.unsplash.com/photo-1474859569645-e0def92b02bc?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzkxNTl8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "6b8dad60-6433-09a2-a6ee-b3a8e2546cdd",
+    "createdAt": "2024-09-19T09:45:09.515Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:48:08.930Z",
+    "result": {
+      "id": "WnzJg5-H2wE",
+      "slug": "photography-pile-of-carrot-WnzJg5-H2wE",
+      "url": "https://images.unsplash.com/photo-1428196457394-f0c4aec5f574?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzkyODh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "85c54ba0-4d9b-6ddb-d2f0-34e5ecb3c7df",
+    "createdAt": "2024-09-19T09:48:58.399Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:49:01.151Z",
+    "result": {
+      "id": "5XXfyMMan84",
+      "slug": "close-up-photography-of-green-and-purple-vegetables-5XXfyMMan84",
+      "url": "https://images.unsplash.com/photo-1518735869015-566a18eae4be?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzkzNDF8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "f53b2b92-76cb-6b8e-330f-476533114274",
+    "createdAt": "2024-09-19T09:49:05.754Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:49:54.596Z",
+    "result": {
+      "id": "2GiRcLP_jkI",
+      "slug": "cucumber-lot-2GiRcLP_jkI",
+      "url": "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3MzkzOTR8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "8a37063e-89a8-bae8-6363-6deca67fa176",
+    "createdAt": "2024-09-19T09:49:11.192Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:52:13.963Z",
+    "result": {
+      "id": "5R2JmImJa30",
+      "slug": "closeup-photo-of-green-lettuce-5R2JmImJa30",
+      "url": "https://images.unsplash.com/photo-1450893979860-22a2c0a0518f?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3Mzk1MzN8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "f6d122ee-ffbc-f027-1ec1-1d767e618ad8",
+    "createdAt": "2024-09-19T09:50:22.740Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:51:01.481Z",
+    "result": {
+      "id": "iD1Lo6DBD2g",
+      "slug": "close-up-photo-of-almonds-iD1Lo6DBD2g",
+      "url": "https://images.unsplash.com/photo-1508779018996-601e37fa274e?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3Mzk0NjF8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "381545d6-20bc-d676-d1e3-b2418746100e",
+    "createdAt": "2024-09-19T09:53:05.057Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:53:33.024Z",
+    "result": {
+      "id": "zdunBSAi3P0",
+      "slug": "three-tomatoes-beside-garlic-zdunBSAi3P0",
+      "url": "https://images.unsplash.com/photo-1444952483853-7c36e902e722?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3Mzk2MTJ8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "8833f1b3-39be-64af-af77-1d7c7ebaeeba",
+    "createdAt": "2024-09-19T09:53:08.534Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T09:55:56.997Z",
+    "result": {
+      "id": "2eFgPIEoBsA",
+      "slug": "blueberries-on-white-ceramic-plate-2eFgPIEoBsA",
+      "url": "https://images.unsplash.com/photo-1450650795614-745f80d91080?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3Mzk3NTZ8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "c3691113-ac63-83ba-a51f-a846783cbebd",
+    "createdAt": "2024-09-19T10:40:02.383Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T10:40:58.529Z",
+    "result": {
+      "id": "Hj53USePB1E",
+      "slug": "shallow-focus-photography-of-brown-eggs-Hj53USePB1E",
+      "url": "https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3NDI0NTh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "31d61977-4db6-be93-85b2-473c9467b013",
+    "createdAt": "2024-09-19T10:40:22.508Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T10:43:28.563Z",
+    "result": {
+      "id": "iysql-xjvhk",
+      "slug": "two-red-and-orange-bell-peppers-iysql-xjvhk",
+      "url": "https://images.unsplash.com/photo-1469053713174-e64e64779a7a?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3NDI2MDh8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "964612d1-2ec0-76fd-694c-c06b63036ef0",
+    "createdAt": "2024-09-19T10:40:23.382Z",
+    "status": "COMPLETED",
+    "resolvedAt": "2024-09-19T10:41:58.324Z",
+    "result": {
+      "id": "Yr4n8O_3UPc",
+      "slug": "grilled-steak-with-vegetables-on-white-ceramic-plate-Yr4n8O_3UPc",
+      "url": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixid=M3w2NTQ0MjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjY3NDI1MTd8&ixlib=rb-4.0.3"
+    }
+  },
+  {
+    "jobId": "4905788a-d317-b096-f628-a659afa24079",
+    "createdAt": "2024-09-19T10:40:23.850Z",
+    "status": "FAILED",
+    "resolvedAt": "2024-09-19T10:45:00.013Z",
+    "result": null
   }
 ]

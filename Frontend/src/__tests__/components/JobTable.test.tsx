@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import JobTable from "@/components/JobTable";
 import { useJobTable } from "@/hooks/useJobTable";
-import { addJob } from "@/actions/jobs";
 import { JobData } from "@/types";
 
 jest.mock("@/hooks/useJobTable");

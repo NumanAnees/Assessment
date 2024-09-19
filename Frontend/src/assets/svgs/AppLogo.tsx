@@ -1,7 +1,6 @@
 import React, { SVGProps } from "react";
 
 export default function AppLogo({
-  color = "#0AB342",
   size = "28px",
   ...props
 }: SVGProps<never> & { size: string }): JSX.Element {

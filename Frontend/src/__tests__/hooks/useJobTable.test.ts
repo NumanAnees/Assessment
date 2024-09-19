@@ -17,7 +17,6 @@ describe("useJobTable hook", () => {
       status: "PENDING",
       createdAt: new Date(),
       resolvedAt: undefined,
-      result: null,
     },
   ];
 

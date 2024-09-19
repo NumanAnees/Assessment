@@ -47,7 +47,7 @@ export const columns: ColumnDef<JobData>[] = [
   },
   {
     accessorKey: "createdAt",
-    header: ({ column }) => {
+    header: () => {
       return (
         <Button
           variant="ghost"
@@ -65,7 +65,7 @@ export const columns: ColumnDef<JobData>[] = [
   },
   {
     accessorKey: "resolvedAt",
-    header: ({ column }) => {
+    header: () => {
       return (
         <Button
           variant="ghost"

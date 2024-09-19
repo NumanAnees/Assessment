@@ -52,7 +52,7 @@ export function DataTable<TData>({ table, data }: DataTableProps<TData>) {
                     <TableCell key={column.id}>
                       {flexRender(column.columnDef.cell, {
                         getValue: () => row[column.id as keyof typeof row],
-                        // @ts-ignore
+                        // @ts-expect-error This is required due to type checking limitations
                         row: { original: row },
                       })}
                     </TableCell>

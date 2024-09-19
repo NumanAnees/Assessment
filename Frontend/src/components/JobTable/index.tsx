@@ -3,7 +3,6 @@
 import React from "react";
 import { DataTable } from "@/components/DataTable/data-table";
 import { DataTablePagination } from "@/components/DataTable/data-table-pagination";
-import { useRouter } from "next/navigation";
 import Heading from "@/components/Heading";
 import { useJobTable } from "@/hooks/useJobTable";
 import { JobData } from "@/types";
@@ -13,7 +12,6 @@ interface JobTableProps {
 }
 
 export default function JobTable({ initialJobData }: JobTableProps) {
-  const router = useRouter();
   const { table, paginatedJobs, handleAddJob } = useJobTable(initialJobData);
 
   return (

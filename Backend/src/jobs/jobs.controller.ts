@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Param, UseGuards } from '@nestjs/common';
+import { Controller, Post, Get, Param } from '@nestjs/common';
 import { SkipThrottle } from '@nestjs/throttler';
 import { JobsService } from './jobs.service';
 import {

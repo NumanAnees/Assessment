@@ -65,7 +65,11 @@ export class JobsService {
   }
 
   async getAllJobs(): Promise<JobData[]> {
-    return this.readJobsFromFile();
+    const jobs = this.readJobsFromFile();
+    return jobs.sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    );
   }
 
   async pendingJobsCount(): Promise<number | null> {

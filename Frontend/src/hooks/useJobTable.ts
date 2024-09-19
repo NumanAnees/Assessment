@@ -1,11 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import {
   useReactTable,
   getCoreRowModel,
   getPaginationRowModel,
-  getSortedRowModel,
-  SortingState,
   PaginationState,
 } from "@tanstack/react-table";
 import { columns } from "@/components/DataTable/data-table-columns";
@@ -13,9 +10,7 @@ import { fetchJobs, pendingJobsCount, addJob } from "@/actions/jobs";
 import { JobData } from "@/types";
 
 export const useJobTable = (initialJobData: JobData[]) => {
-  const router = useRouter();
   const [jobs, setJobs] = useState<JobData[]>(initialJobData);
-  const [sorting, setSorting] = useState<SortingState>([]);
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
@@ -24,9 +19,14 @@ export const useJobTable = (initialJobData: JobData[]) => {
 
   const handleAddJob = async () => {
     try {
-      const newJob = await addJob();
+      await addJob();
       setNewJobAdded(true);
-      router.refresh();
+
+      setPagination((prevPagination) => ({
+        ...prevPagination,
+        pageIndex: 0,
+        pageSize: prevPagination.pageSize,
+      }));
     } catch (error) {
       console.error("Error adding job:", error);
     }
@@ -36,11 +36,10 @@ export const useJobTable = (initialJobData: JobData[]) => {
     try {
       const updatedJobs = await fetchJobs();
       setJobs(updatedJobs);
-      router.refresh();
     } catch (error) {
       console.error("Error fetching jobs:", error);
     }
-  }, [router]);
+  }, []);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout | null = null;
@@ -71,11 +70,8 @@ export const useJobTable = (initialJobData: JobData[]) => {
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    onSortingChange: setSorting,
     onPaginationChange: setPagination,
     state: {
-      sorting,
       pagination,
     },
     pageCount: Math.ceil(jobs.length / pagination.pageSize),
